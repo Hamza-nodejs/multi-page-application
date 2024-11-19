@@ -1,13 +1,13 @@
 // routes.js
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Pricing from "./pages/Pricing";
-import Contact from "./pages/Contact";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Services from "../pages/Services";
+import Pricing from "../pages/Pricing";
+import Contact from "../pages/Contact";
 
-export default function AppRoutes() {
+export default function myRoutes() {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
