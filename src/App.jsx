@@ -1,12 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import MyRoutes from "./routes/myRoutes";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
       <MyRoutes />
-    </Router>
+    </BrowserRouter>
   );
 }
 
