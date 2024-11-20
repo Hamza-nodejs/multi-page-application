@@ -6,6 +6,8 @@ import Services from "../pages/Services";
 import Pricing from "../pages/Pricing";
 import Contact from "../pages/Contact";
 import PopulationData from "../components/PopulatedData";
+import JsonApi from "../components/JsonApi";
+import JsonDetail from "../components/JsonDetail";
 
 export default function myRoutes() {
     return (
@@ -16,6 +18,8 @@ export default function myRoutes() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/api" element={<PopulationData />} />
+            <Route path="/json" element={<JsonApi />} />
+            <Route path="/json/:postid" element={<JsonDetail />} />
         </Routes>
     );
 }

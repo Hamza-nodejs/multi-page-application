@@ -98,6 +98,16 @@ export default function NavBar() {
                                 API
                             </Link>
                         </li>
+
+                        <li>
+                            <Link
+                                to="/json"
+                                onClick={() => setIsMenuOpen(false)}
+                                className="text-gray-900 md:text-white hover:text-blue-600 dark:text-white"
+                            >
+                                JSON
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
