@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from "../components/NavBar"
 import { v4 } from "uuid"
+import NewLetter from '../components/NewLetter';
 export default function Home() {
     const id = v4();
 
@@ -16,6 +17,7 @@ export default function Home() {
             <p>
                 Refresh for new id
             </p>
+            <NewLetter />
         </>
     )
 }
