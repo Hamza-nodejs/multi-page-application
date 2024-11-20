@@ -89,6 +89,15 @@ export default function NavBar() {
                                 Contact
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                to="/api"
+                                onClick={() => setIsMenuOpen(false)}
+                                className="text-gray-900 md:text-white hover:text-blue-600 dark:text-white"
+                            >
+                                API
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
