@@ -15,7 +15,15 @@ export default function Users() {
                     endpoint: import.meta.env.VITE_USER_API,
                     method: 'GET',
                 });
-                setUsers(response);
+                console.log('API Response:', response);
+
+                // Access the array from response.data
+                if (Array.isArray(response.data)) {
+                    setUsers(response.data);
+                } else {
+                    throw new Error('API did not return an array in data');
+                }
+
                 setLoading(false);
             } catch (err) {
                 setError(err.message || 'Failed to load users');
@@ -31,14 +39,12 @@ export default function Users() {
 
     return (
         <div>
-            {/* <h1>Users</h1> */}
             <ul>
                 {users.map((user) => (
-                    <li key={user.id}>
-                        <h2>{user.name}</h2>
-                        <p>Email: {user.email}</p>
-                        <p>Phone: {user.phone}</p>
-                        <p>Website: {user.website}</p>
+                    <li key={user._id}>
+                        <h2>{user.make}</h2>
+                        <p>Model: {user.model}</p>
+                        <p>Variant: {user.variant}</p>
                         <p>------------------------------</p>
                     </li>
                 ))}
